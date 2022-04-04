@@ -1,0 +1,55 @@
+/*
+ * @Author: your name
+ * @Date: 2022-04-01 10:23:12
+ * @LastEditTime: 2022-04-01 10:23:12
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /my-app/src/App copy 34.js
+ */
+import React from 'react';
+import './App.css';
+
+class CustomTextInput extends React.Component {
+    constructor(props) {
+        super(props);
+        // 创建一个 ref 来存储 textInput 的 DOM 元素
+        this.textInput = React.createRef();
+        this.focusTextInput = this.focusTextInput.bind(this);
+    }
+
+    focusTextInput() {
+        // 直接使用原生 API 使 text 输入框获得焦点
+        // 注意：我们通过 "current" 来访问 DOM 节点
+        this.textInput.current.focus();
+    }
+
+    render() {
+        // 告诉 React 我们想把 <input> ref 关联到
+        // 构造器里创建的 `textInput` 上
+        return (
+            <div>
+                <input type="text" ref={this.textInput} />
+                <input type="button" value="Focus the text input" onClick={this.focusTextInput} />
+            </div>
+        );
+    }
+}
+
+class AutoFocusTextInput extends React.Component {
+    constructor(props) {
+        super(props);
+        this.textInput = React.createRef();
+    }
+
+    componentDidMount() {
+        this.textInput.current.focusTextInput();
+    }
+
+    render() {
+        return (
+            <CustomTextInput ref={this.textInput} />
+        )
+    }
+}
+
+export default AutoFocusTextInput;
