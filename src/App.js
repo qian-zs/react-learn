@@ -6,7 +6,6 @@ function List() {
     const [list, setList] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [name, setName] = useState('sheng');
-    const inputEl = useRef(null);
 
     useEffect(() => {
         setList(getStorage() || []);
@@ -21,8 +20,7 @@ function List() {
             id: new Date().getTime(),
             text: inputValue,
         }));
-        inputEl.current.value = '';
-        inputEl.current.focus();
+        setInputValue('');
     }
 
     function removeItem(id) {
@@ -32,7 +30,7 @@ function List() {
     return (
         <div className='wrapper'>
             <div className='input-box'>
-                <input type="text" ref={inputEl} placeholder="请输入项目" onChange={(e) => setInputValue(e.target.value)} />
+                <input type="text" placeholder="请输入项目" onChange={(e) => setInputValue(e.target.value)} value={inputValue} />
                 <input type="text" onChange={(e) => setName(e.target.value)} />
                 <button onClick={addItem}>增加</button>
             </div>
