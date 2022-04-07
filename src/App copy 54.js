@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useContext } from 'react';
+import React, { useContext } from 'react';
 
 const obj = {
     value: 1,
