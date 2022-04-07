@@ -37,3 +37,21 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+}
+
+.box1 {
+  background: red;
+}
+
+.box2 {
+  background: pink;
+}
