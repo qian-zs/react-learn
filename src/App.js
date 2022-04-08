@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-04-05 22:25:11
- * @LastEditTime: 2022-04-08 11:46:40
+ * @LastEditTime: 2022-04-08 11:56:59
  * @LastEditors: Please set LastEditors
  * @Description: 有一个小数，一个大数
                 有两组加、减按钮，分别对小数大数做操作，小数按钮加减1，大数按钮加减100
@@ -12,7 +12,7 @@
                 计算器卸载时，上报当前的数字
  * @FilePath: /my-app/src/App.js
  */
-const { useState, useCallback, useMemo, useEffect, useRef } = require("react");
+import { useState, useCallback, useMemo, useEffect, useRef } from 'react';
 
 const report = () => console.log('do report');
 const reportStat = (n, b) => console.log(`do reportStat ${n} ${b}`);
