@@ -1,14 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2022-04-05 22:25:11
- * @LastEditTime: 2022-04-08 11:56:59
+ * @LastEditTime: 2022-04-08 22:11:19
  * @LastEditors: Please set LastEditors
  * @Description: 有一个小数，一个大数
                 有两组加、减按钮，分别对小数大数做操作，小数按钮加减1，大数按钮加减100
                 计数器初次挂载时拉取欢迎问候语
                 当小数达到100时，按钮变为红色，否则变为绿色
                 当大数达到1000时，按钮变为紫色，否则变为绿色
-                当大数达到10000时，上报大数的数字
+                当大数达到2000时，上报大数的数字
                 计算器卸载时，上报当前的数字
  * @FilePath: /my-app/src/App.js
  */
@@ -70,5 +70,5 @@ export default function App() {
             {show && <Counter />}
             <button onClick={toggle}>toggle</button>
         </div>
-    )
+    );
 }
