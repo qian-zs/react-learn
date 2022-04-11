@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2022-04-05 22:25:11
+ * @LastEditTime: 2022-04-11 11:23:21
+ * @LastEditors: Please set LastEditors
+ * @Description: 状态提升
+ * @FilePath: /my-app/src/App copy 17.js
+ */
 import React from 'react';
 import './App.css';
 
