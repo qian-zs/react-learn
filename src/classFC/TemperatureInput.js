@@ -11,11 +11,12 @@ class TemperatureInput extends React.Component {
   };
 
   render() {
+    const { temperature } = this.props;
     return (
       <p>
         <label htmlFor="tempInput">请输入天气温度：</label>
         {/* onChange 事件调用函数 */}
-        <input className="Tem-input" type="text" name="tempInput" value={this.props.temperature} onChange={this.handleTemp} />
+        <input className="Tem-input" type="text" name="tempInput" value={temperature} onChange={this.handleTemp} />
       </p>
     );
   }
